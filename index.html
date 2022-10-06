@@ -1,0 +1,120 @@
+<!DOCTYPE html=5.0>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement_Wedding Form</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <Div class="Container">
+        <form method="post" id="frmSubmit" >
+        <h1>Engagement/Wedding Form</h1>
+        <div>
+        <h3>Your WhatsApp No. from which you have chat with us</h3>
+        <input class="filltxt" type="tel"> <br><br>
+        <hr>
+        <h3>Select Your Program</h3>
+         <input type="radio" name="pro"> Engagement
+         <input type="radio" name="pro"> Wedding
+       
+        <h3>From Which Side</h3>
+        <input type="radio" name="side">  Bride Side First
+        <input type="radio" name="side">  Groom Side First
+        <br> <br>
+        <hr>
+
+        <h3>Bride Name</h3>
+        <input class="filltxt" type="text">
+
+        <h3>Bride Parents Name</h3>
+        <p>Father's Name</p> <input type="">
+        <p>Mother's Name</p> <input type="">
+        <br><br>
+        <hr>
+
+        <h3>Groom Name</h3>
+        <input class="filltxt" type="text">
+
+        <h3>Groom Parents Name</h3>
+        <p>Father's Name</p> <input type="">
+        <p>Mother's Name</p> <input type="">
+        <br><br>
+        <hr>
+
+        <h3>Program Date</h3>
+        <input type="date">
+        <input type="time">
+        <br><br>
+        <hr>
+
+        <h3>Venue</h3>
+        <p> Place Name </p> <input class="filltxt" type="">
+        <p>Full Address <br>
+        <textarea placeholder="Please Enter Your Full Address" name="address" id="desc" cols="30" rows="10"></textarea></p>
+        <br><br>
+        <hr>
+
+        <h3>Family Surname</h3>
+        <input class="filltxt" type="">
+        <br><br>
+        <hr>
+
+        <h3>Do you want this video with Bride Groom Photos? </h3>
+        <p><input type="radio" name="photos"> Yes (Than please upload Bride or Groom Photo)</p>
+        <p><input type="radio" name="photos">   No </p>
+
+        <h3>Upload Bride Photo</h3> <input type="file" >
+        <h3>Upload Groom Photo</h3> <input type="file" >
+        <br><br>
+        <hr>
+
+        <h3>Do you want this sample for Both Side? (Same sample other side video cost will be 50%)</h3>
+        <input type="radio" name="boside"> Yes <br>
+        <input type="radio" name="boside"> No
+
+        <h3>Do you want Extra Programs Slides?</h3>
+        <input type="radio" name="expro"> Yes (100 Rupees per slide will be charge) <br>
+        <input type="radio" name="expro"> No 
+        
+        <h3>Do you want our Branding End slide?</h3>
+        <img id="cover" src="img/cover.jpg" alt="" width="75%">
+        <br>
+        <input type="radio" name="branding"> Yes <br>
+        <input type="radio" name="branding"> No (50 Rupees will be Extra Charge)
+            <br>
+            <br>
+            <hr>
+
+        <h3>Any Other Information.</h3>
+        <textarea name="" id="desc" cols="30" rows="10"></textarea>
+    
+        <br>
+        <input type="submit" id="btnSubmit">
+        </div>          
+</Div>
+</form>
+<script>
+    jQuery('#frmSubmit').on('submit',function(e){
+      e.preventDefault();
+      jQuery('#msg').html('Please wait...');
+      jQuery('#btnSubmit').attr('disabled',true);
+      jQuery.ajax({
+        url:'https://script.google.com/macros/s/AKfycbwzENEXyx4Adgi4mYFVBB1a_g44fA6rxdBZjFeFqvJtBe93bopV1nx2HEhJoxB61wno/exec',
+          type:'post',
+          data:jQuery('#frmSubmit').serialize(),
+          success:function(result){
+              jQuery('#frmSubmit')[0].reset();
+              jQuery('#msg').html('Thank You');
+              jQuery('#btnSubmit').attr('disabled',false);
+              //window.location.href='';
+          }
+      });
+    });
+    </script>
+
+</body>
+</html>

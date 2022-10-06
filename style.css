@@ -1,0 +1,52 @@
+.Container{
+    background-color: #ededed;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: #67b829;
+    border-radius: 10px;
+    border: 1px solid #ebf4e0;
+    color: white;
+    padding: 50px; 
+    margin: 2px;
+
+}
+div div{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #ebf4e0;
+padding: 20px;
+border-radius: 10px;
+border: 1px solid #67b829;
+
+}
+h3 {
+    color: red;
+}
+
+#cover {border: 1px solid black;
+        border-radius: 10px;
+}
+
+.filltxt{
+    width: 100%;
+    border: 1px #67b829 solid;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+#desc{
+    border: 1px solid #67b829;
+    width: 100%;
+    border-radius: 5px;
+}
+#button{
+    background-color: #67b829;
+    color: white;
+    border: 1px #67b829;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 4px;
+}
